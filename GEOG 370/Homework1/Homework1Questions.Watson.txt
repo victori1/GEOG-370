@@ -1,0 +1,27 @@
+Victoria Watson
+My Map: Carrboro, NC
+Layers: OpenStreetMap
+	City Limits
+	Bodies of Water
+	Streams
+
+Where I got my data:
+http://www.ci.carrboro.nc.us/142/Geographic-Information-Systems
+
+What was the finest scale of data that you found?
+	1.511
+
+List up to ten types of layers that you found.
+	Streets
+	Places in Carrboro
+	Parks
+	School Districts
+	Tree Cover
+	Bikeways
+	Sidewalks
+
+In what formats could the data be downloaded?
+	I found and used mostly shapefiles, but I also saw geoJSON and csv files.
+
+What problems, if any, did you encounter while trying to use a particular dataset?
+	Some of the datasets I wanted to use were broken links or had pretty outdated information by over 10 years.
