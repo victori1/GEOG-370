@@ -9,19 +9,27 @@
 <body>
     <h1>Homework 6 Part 2: Census data ratios and categories </h1>
     <h2>Ratio of Births to Married Women to Total Births by County in Indiana</h2>
-    <h3>This ratio was calculated by dividing the number of births to married women by the number of total births in each county in the state of Indiana. The reason for the ratio is to show the distribution of births within marriage across the state in relation to total biorths that include births to widowed, divorced, separated, and never married women.</h3>
+    <h3>This ratio was calculated by dividing the number of births to married women by the number of total births in each county in the state of Indiana. The reason for the ratio is to show the distribution of births within marriage across the state in relation to total births that include births to widowed, divorced, separated, and never married women.</h3>
 <!-- Your map goes here --> 
+<h2>Classifications:</h2>
     <a href="./EqualCount.png">
     <img src="./EqualCount.png" alt="Equal Count" width='800px'>
     </a>
+    <h3>Advantages: Equal proportion of the sample of data in each interval</h3>
+    <h3>Disadvantages: Groups outliers in with mcategories, distorting the distribution of the data a little bit</h3>
 
     <a href="./EqualInterval.png">
         <img src="./EqualInterval.png" alt="Equal Interval" width='800px'>
         </a>
+    <h3>Advantages: Each category has same range of values and thus represents data with a normal distribution well</h3>
+    <h3>Disadvantages: If a data set has very close data values, there could be a map with very similar colors</h3>
+    
 
     <a href="./NaturalBreaks.png">
         <img src="./NaturalBreaks.png" alt="Natural Breaks" width='800px'>
         </a>
-
+    <h3>Advantages: Automatically sorts data based on naturally occuring categories within the data based on the distribution, depicts trends in data pretty accurately</h3>
+    <h3>Disadvantages: If a data set doesn't have much variance or trends, there may be too few categories or categories that do not make much sense</h3>
+    
 </body>
 </html>
