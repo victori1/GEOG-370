@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 8</title>
+</head>
+<body>
+        <h1>Homework 8: </h1>
+        
+        <h2>Research Question</h2>
+        <p>This project uses vector geoprocessing analysis to answer the following real-world question: Is there overlap between recognized Native American reservations and crude oil pipelines?</p>
+        
+        <!-- Pre-work Discussion -->
+        <h2>Background</h2>
+        <p>Prior to beginning geoprocessing, I used a number of techniques from previous units to reduce the data to work at the scale of Mecklenburg County. I found the location of the Huntersville spill from the NCEQ website and created a shapefile for the location in EPSG 2264. Using queries, I reduced the EIA Petroleum Product Pipelines data to a layer featuring only the Colonial Pipeline. The Colonial Pipeline spans many states, so I used an intersection with a NC boundary shapefile to retain only the NC segment of the pipeline. Later on I clipped the NC Colonial Pipeline to just the segment within Mecklenburg County. I downloaded public and private well locations in Mecklenburg County. I reprojected all files to the EPSG 2264 projection. Lastly, I created a population density choropleth at the census block scale using 2020 ACS estimates.</p><br>
+        <!-- The line of code below hyperlinks to your map and embeds the image in the webpage -->
+        <a href="./Images/PopDensity.png"><img src="./Images/PopDensity.png" alt="my census map" width='800px'></a>
+        
+        <!-- Discussion of methods and presentation of results -->
+        <h2>Methods and Results</h2>
+        <p>According to the NC Environmental Quality website, in response to the emergency, Colonial Pipeline established a 2,000 feet area for environmental sampling. I recreated the 2,000ft buffer around the accident site. I then performed an intersection between the buffer and the wells (only private wells were in the area). The output of the intersection was 35 private well sites. I counted the total using the vector analysis tool. I then generated a unique value list using the well id, if I was in the field I would use the well ids to find the well locations for sampling.</p><br>
+        <!-- The line of code below hyperlinks to your map and embeds the image in the webpage -->
+        <a href="./Images/HW8 Outputs.png"><img src="./Images/HW8 Outputs.png" alt="my census map" width='800px'></a>
+        
+        <!-- Data files on GitHub -->
+        <h2>Output Files</h2>
+            <a href="https://github.com/adriennehall8/GISUNC/blob/main/08GeospatialAnalysis/Data/Buffer.geojson"> Perimeter (Buffer)</a><br>     
+            <a href="https://github.com/adriennehall8/GISUNC/blob/main/08GeospatialAnalysis/Data/Well_Sampling_Sites.geojson"> Well Sampling Sites (Intersection of Wells with Buffer)</a><br>
+            <a href="./Data/UniqueValues.rtf"> Unique Sample Sites (Unique Value Analysis of Well Sampling Sites, Count = 35)</a><br>
+            <a href="https://github.com/adriennehall8/GISUNC/blob/main/08GeospatialAnalysis/Data/HuntersvilleSpillLocation.geojson"> Huntersville Spill Location </a><br>
+            
+            
+        <!-- References -->
+        <h2>Sources</h2>
+            <a href="https://deq.nc.gov/about/divisions/waste-management/underground-storage-tanks-section/colonial-pipeline-spill-information-huntersville-nc#background"> NC Environmental Quality, Colonial Pipeline Spill Information - Huntersville, NC</a><br>    
+            <a href="https://www.eia.gov/maps/layer_info-m.php"> U.S. EIA - Petroleum Product Pipelines Shapefile</a><br>
+            <a href="https://www.mecknc.gov/LUESA/GIS/Pages/GIS-Data-Center.aspx"> Mecklenburg County GIS Data Center </a><br>
+            <a href="http://maps.co.mecklenburg.nc.us/openmapping/data.html?search=water"> Public and Private Water Wells</a><br>
+            <a href="hhttps://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html"> 2021 U.S. Census TIGER/Line Shapefiles</a><br> 
+            <a href="https://data.census.gov/cedsci/"> 2020 ACS 5-Year Population Estimates (Table B01003)</a><br>
+            <a href="https://www.census.gov/quickfacts/fact/note/US/LND110210"> Calculating Population Density (Persons Per Square Mile) </a><br> 
+</body>
+</html>
